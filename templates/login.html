@@ -1,0 +1,16 @@
+<html>
+<body>
+<h2>login page</h2>
+<form method="POST">
+{% csrf_token %}
+username:<input type="text" 
+name="username"><br><br>
+
+password:<input type="password" name="password"><br><br>
+
+<button type="submit">log in</button></form>
+{% if error %}
+<p style="color:red;">{{error}}</p>
+{% endif %}
+</body>
+</html>
